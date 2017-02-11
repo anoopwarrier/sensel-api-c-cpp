@@ -319,6 +319,20 @@ bool senselStopScanning(void)
   return _writeReg(SENSEL_REG_SCAN_ENABLED, 1, &val);
 }
 
+float senselGetWidth(void)
+{
+	uint32 width;
+	_readReg(SENSEL_REG_SENSOR_ACTIVE_AREA_WIDTH_UM, 4, (uint8*)&width);
+	return width / 1000.0f;
+}
+
+float senselGetHeight(void)
+{
+	uint32 height;
+	_readReg(SENSEL_REG_SENSOR_ACTIVE_AREA_HEIGHT_UM, 4, (uint8*)&height);
+	return height / 1000.0f;
+}
+
 bool senselSetFrameContentControl(uint8 content)
 {
 
