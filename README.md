@@ -1,13 +1,15 @@
-#Sensel C/C++ API
+# This API is being deprecated. [Check out the new Sensel API.](https://github.com/sensel/sensel-api)
+
+# Sensel C/C++ API
 
 This API allows users to communicate with a Sensel device through C or C++. This API should be cross-platform, and work across Windows, Mac, and Linux. If you find any incompatibilities, please submit a bug report through Github.
 
-##Setup
+## Setup
 Clone this Github project and move all of the sensel* files into your project to build against. Note: if you are on windows, you do not need sensel_serial_linux.c and if you are on Linux/Mac, you do not need sensel_serial_win.cpp.
 
 Make sure to look at the sensel_example_read_contacts or sensel_example_read_frames project under the examples folder to see how to setup your project. On Linux/Mac, simply navigate to this project and type in "make" to build the executable. On Windows, you will want to open up the read_contacts_win.sln or read_frame_win.sln file in Visual Studio and build the project from there. Note: this project was created with Visual Studio 2013.
 
-##Usage
+## Usage
 Here's a high-level view of how to use this API:
 
 First, we need to import Sensel:
@@ -65,9 +67,9 @@ if(sensel_sensor_opened)
 }
 ```
 
-##Examples
+## Examples
 
 There is an example in this repository that you can use as a starting point for your project:
 
-####sensel_example_read_contacts
+#### sensel_example_read_contacts
 This project opens up a Sensel device, reads out contact data, and prints it to the screen.
